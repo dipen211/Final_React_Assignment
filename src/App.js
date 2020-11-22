@@ -3,7 +3,7 @@ import LoginForm from './component/Login/Login';
 import { BrowserRouter, Route } from 'react-router-dom';
 import DataList from './component/DataList/DataList';
 
-const App = () => {
+function App() {
   return (
     <BrowserRouter>
       <div className="App">
