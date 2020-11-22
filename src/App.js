@@ -1,24 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import LoginForm from './component/Login/Login';
+import { BrowserRouter, Route } from 'react-router-dom';
+import DataList from './component/DataList/DataList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Route exact path="/" component={LoginForm} />
+        <Route path="/DataGrid/DataList" exact component={DataList} />
+      </div>
+    </BrowserRouter>
   );
 }
 
