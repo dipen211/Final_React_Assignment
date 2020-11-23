@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classes from './Login.module.css';
+import classes from './Login.css';
 import { Route } from "react-router-dom";
 import DataList from '../DataList/DataList';
 
