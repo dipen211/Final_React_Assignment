@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classes from './Login.css';
+import './Login.css';
 import { Route } from "react-router-dom";
 import DataList from '../DataList/DataList';
 
@@ -115,27 +115,27 @@ class LoginForm extends Component {
 
     render() {
         return (
-            <div id={classes.Register}>
+            <div id="Register">
                 {
                     this.state.show
                         ? <>
                             <label>New Password</label>
                             <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange} />
-                            <div className={classes.errorMsg}>{this.state.errors.password}</div>
-                            <button onClick={this.passwordChangeHandler} className={classes.btnForgorPass}>Change password</button>
+                            <div className="errorMsg">{this.state.errors.password}</div>
+                            <button onClick={this.passwordChangeHandler} className="btnForgorPass">Change password</button>
                         </>
                         : <>
-                            <div id={classes.login}>
+                            <div id="login">
                                 <h3>Login page</h3>
                                 <form method="post" name="userLoginForm" onSubmit={this.submituserLoginForm} >
                                     <label>Name</label>
                                     <input type="text" name="username" value={this.state.fields.username} onChange={this.handleChange} />
-                                    <div className={classes.errorMsg}>{this.state.errors.username}</div>
+                                    <div className="errorMsg">{this.state.errors.username}</div>
                                     <label>Password</label>
                                     <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange} />
-                                    <div className={classes.errorMsg}>{this.state.errors.password}</div>
-                                    <input type="submit" className={classes.button} value="Login" />
-                                    <p><button onClick={this.showForgotPassword} className={classes.btnForgorPass}>Forgot Password?</button></p>
+                                    <div className="errorMsg">{this.state.errors.password}</div>
+                                    <input type="submit" className="button" value="Login" />
+                                    <p><button onClick={this.showForgotPassword} className="btnForgorPass">Forgot Password?</button></p>
                                 </form>
                             </div>
                         </>
