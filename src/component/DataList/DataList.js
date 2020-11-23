@@ -208,7 +208,7 @@ class DataList extends React.Component {
                     <ExcelExportColumn field="Discontinued" title="Discontinued" />
                 </ExcelExport>
                 <Grid
-                    style={{ height: "420px", width: "60%" }}
+                    style={{ height: "420px"}}
 
                     data={(filterBy(this.state.data, this.state.filter)).slice(this.state.skip, this.state.take + this.state.skip)}
 
